@@ -11,5 +11,13 @@ jobs:
           repository: dndred/test2
           fetch-depth: 0
           path: ./test2
-      - run: cd ./test2 && ls -la && cat README.md
-      - run: gh
+      - run: touch ./test2/test.txt
+      - name: Pull Request
+        uses: haiiliin/action-pull-request-another-repo@v1.0.3
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: 'test2'
+          destination_repo: 'dndred/test2'
+          destination_base_branch: 'master'
+          destination_head_branch: 'test'
