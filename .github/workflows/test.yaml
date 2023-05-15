@@ -11,4 +11,4 @@ jobs:
           repository: dndred/test2
           fetch-depth: 0
           path: ./test2
-      - run: cd ./test2 && ls -la
+      - run: cd ./test2 && ls -la && cat README.md
