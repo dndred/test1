@@ -21,3 +21,5 @@ jobs:
           destination_repo: 'dndred/test2'
           destination_base_branch: 'master'
           destination_head_branch: 'test'
+          user_email: 'dndred@gmail.com'
+          user_name: 'dndred'
