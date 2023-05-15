@@ -1,0 +1,14 @@
+name: Test
+on: [push]
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: mkdir ./test2
+      - uses: actions/checkout@v3
+        with:
+          repository: dndred/test2
+          fetch-depth: 0
+          path: ./test2
+      - run: cd ./test2 && ls -la
