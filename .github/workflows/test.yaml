@@ -5,14 +5,13 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - run: mkdir ./test2
       - uses: actions/checkout@v3
         with:
           repository: dndred/test2
           fetch-depth: 0
-          path: ./test2
-      - run: touch ./test2/test.txt
-      - run: pwd
+          path: ../test2
+      - run: touch ../test2/test.txt
+      - run: cd ../test2 && ls -la
       - name: Pull Request
         uses: haiiliin/action-pull-request-another-repo@v1.0.3
         env:
