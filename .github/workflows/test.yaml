@@ -10,7 +10,6 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: 'test2'
           destination_repo: 'dndred/test2'
           destination_base_branch: 'master'
           destination_head_branch: 'test'
