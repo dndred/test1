@@ -5,13 +5,6 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: dndred/test2
-          fetch-depth: 0
-          path: ../test2
-      - run: touch ../test2/test.txt
-      - run: cd ../test2 && ls -la
       - name: Pull Request
         uses: dndred/action-pull-request-another-repo@main
         env:
