@@ -1,0 +1,17 @@
+name: Test
+on: [push]
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Request
+        uses: dndred/action-pull-request-another-repo@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          destination_repo: 'dndred/test2'
+          destination_head_branch: 'test123'
+          user_name: 'GitHub Actions'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          command: 'touch `date +%Y%m%d%H%M%S`'
