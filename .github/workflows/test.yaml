@@ -13,7 +13,7 @@ jobs:
       - run: touch ../test2/test.txt
       - run: cd ../test2 && ls -la
       - name: Pull Request
-        uses: haiiliin/action-pull-request-another-repo@v1.0.3
+        uses: dndred/action-pull-request-another-repo@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
